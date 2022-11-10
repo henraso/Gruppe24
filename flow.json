@@ -1,0 +1,873 @@
+[
+    {
+        "id": "f258bac50c5c3410",
+        "type": "tab",
+        "label": "BME280",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b3a066f6b6718cc8",
+        "type": "tab",
+        "label": "Vanntank",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f524022af2862ccb",
+        "type": "tab",
+        "label": "Postkasse",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "52eab17aebacfe9f",
+        "type": "tab",
+        "label": "Plantesensor",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "83b034970699901a",
+        "type": "mqtt-broker",
+        "name": "hivemq",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "28bd952101d92c0a",
+        "type": "ui_tab",
+        "name": "PROSJEKT",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "dfa11a1f0d98a038",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "dark"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "none",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "0f6db970f58f0759",
+        "type": "ui_group",
+        "name": "BME280",
+        "tab": "28bd952101d92c0a",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ae2dfc3dc2f80938",
+        "type": "ui_group",
+        "name": "Vanntank",
+        "tab": "28bd952101d92c0a",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ee90ea8981de4014",
+        "type": "ui_group",
+        "name": "Postkasse",
+        "tab": "28bd952101d92c0a",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f5ea17cd4014bb9d",
+        "type": "ui_group",
+        "name": "Plantesensor",
+        "tab": "28bd952101d92c0a",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "52cff69bd0b498e6",
+        "type": "ui_tab",
+        "name": "DASHBOARD",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f8cf9a186af0e256",
+        "type": "mqtt in",
+        "z": "f258bac50c5c3410",
+        "name": "",
+        "topic": "hivemq/temperature",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "83b034970699901a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 250,
+        "y": 220,
+        "wires": [
+            [
+                "32ab3a781119d79a",
+                "30ea29a494bf58cd",
+                "aa640f166813c1af"
+            ]
+        ]
+    },
+    {
+        "id": "2571e64a41e38c26",
+        "type": "mqtt in",
+        "z": "f258bac50c5c3410",
+        "name": "",
+        "topic": "hivemq/humidity",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "83b034970699901a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 240,
+        "y": 340,
+        "wires": [
+            [
+                "4bc9c379fd9f7745",
+                "00befbd1ff0351e3",
+                "faa799892d1278db"
+            ]
+        ]
+    },
+    {
+        "id": "32ab3a781119d79a",
+        "type": "ui_text",
+        "z": "f258bac50c5c3410",
+        "group": "0f6db970f58f0759",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Siste måling:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 490,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "4bc9c379fd9f7745",
+        "type": "ui_chart",
+        "z": "f258bac50c5c3410",
+        "name": "",
+        "group": "0f6db970f58f0759",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Luftfuktighet",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 490,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "00befbd1ff0351e3",
+        "type": "ui_text",
+        "z": "f258bac50c5c3410",
+        "group": "0f6db970f58f0759",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Siste måling:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 490,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "30ea29a494bf58cd",
+        "type": "debug",
+        "z": "f258bac50c5c3410",
+        "name": "debug temp",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "aa640f166813c1af",
+        "type": "ui_chart",
+        "z": "f258bac50c5c3410",
+        "name": "",
+        "group": "0f6db970f58f0759",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Temperatur",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 490,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3434f423d4285593",
+        "type": "comment",
+        "z": "f258bac50c5c3410",
+        "name": "Får verdier inn fra ESP32",
+        "info": "",
+        "x": 270,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "faa799892d1278db",
+        "type": "debug",
+        "z": "f258bac50c5c3410",
+        "name": "debug hum",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "3c3e1412ab59b2a6",
+        "type": "comment",
+        "z": "f258bac50c5c3410",
+        "name": "Viser data mottatt illustrativt",
+        "info": "",
+        "x": 540,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "3fb3619e8f44689f",
+        "type": "mqtt in",
+        "z": "b3a066f6b6718cc8",
+        "name": "",
+        "topic": "hivemq/water_level",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "83b034970699901a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 450,
+        "y": 440,
+        "wires": [
+            [
+                "0e34922fb6024352",
+                "4492c43f1cf89560",
+                "5ee4252fb874f788"
+            ]
+        ]
+    },
+    {
+        "id": "4492c43f1cf89560",
+        "type": "ui_text",
+        "z": "b3a066f6b6718cc8",
+        "group": "ae2dfc3dc2f80938",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Vannivå:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1040,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "0e34922fb6024352",
+        "type": "function",
+        "z": "b3a066f6b6718cc8",
+        "name": "Endrer farge og oppdaterer hvis nivå OK",
+        "func": "/* \nEndrer farge når nivået er ved et gitt nivå som ESP sender\nhvis nivået er for høyt = gul farge (msg.payload = 0)\nhvis nivå er for lavt = rød (msg.payload = 2)\nhvis nivå begynner å bli lavt = gul (msg.payload = 1)\nESP32 sender kun verdi hvis nivået ikke er som det skal være,\nså hvis det ikke kommer inn en melding på 3 minutter, vil \nmsg.payload settes til 3, og den meldingen sendt til denne\nfunksjonen, som da oversetter det til grønn farge.\n*/\n\nif (msg.payload == 3.00) { //sjekker inngangsverdi\n    msg.colour = \"#28d74e\" //endrer farge til grønn\n    msg.payload = \"Nivå OK\"\n}\nif (msg.payload == 0.00) { //sjekker inngangsverdi (verdi for høy)\n    msg.colour = \"#ffbf00\" //endrer farge til gult\n}\nif (msg.payload == 1.00) { //sjekker inngangsverdi (verdi begynner å bli lav)\n    msg.colour = \"#ffbf00\" //endrer farge til gult\n}\nif (msg.payload == 2.00) { //sjekker inngangsverdi\n    msg.colour = \"#dc2324\" //endrer farge til rødt\n}\n\n\nreturn msg; //returnerer msg.colour",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 380,
+        "wires": [
+            [
+                "8a02a8c307912734",
+                "0c0a5280358e8bcb",
+                "4492c43f1cf89560"
+            ]
+        ]
+    },
+    {
+        "id": "8a02a8c307912734",
+        "type": "ui_button",
+        "z": "b3a066f6b6718cc8",
+        "name": "",
+        "group": "ae2dfc3dc2f80938",
+        "order": 2,
+        "width": "6",
+        "height": "2",
+        "passthru": false,
+        "label": "{{payload}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{colour}}",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1030,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a85b7a743f149bb9",
+        "type": "comment",
+        "z": "b3a066f6b6718cc8",
+        "name": "Ikke en knapp, kun  brukt for å vise en farge tilsvarende nivået i tanken",
+        "info": "",
+        "x": 1230,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "0c0a5280358e8bcb",
+        "type": "debug",
+        "z": "b3a066f6b6718cc8",
+        "name": "Endre farge",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1050,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "4711ee0ec4e8ce88",
+        "type": "inject",
+        "z": "b3a066f6b6718cc8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "2.00",
+        "payloadType": "str",
+        "x": 130,
+        "y": 440,
+        "wires": [
+            [
+                "0e34922fb6024352",
+                "5ee4252fb874f788"
+            ]
+        ]
+    },
+    {
+        "id": "5ee4252fb874f788",
+        "type": "function",
+        "z": "b3a066f6b6718cc8",
+        "name": "Lagrer siste tid",
+        "func": "/*\nNår den får en msg.payload, lagre tiden meldingen kom inn\ni en variabel som er tilgjengelig i hele flowen\n*/\n\nvar lastMsg = flow.get('lastMsg') || 0;\n\nif (msg.payload) { //sjekker inngangsverdi\n    flow.set('lastMsg', Date.now());\n    msg.payload = flow.get('lastMsg');\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f5ee8d6afe175f47",
+        "type": "debug",
+        "z": "b3a066f6b6718cc8",
+        "name": "har det gått lang nok tid?",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "a3be7f81af16928b",
+        "type": "function",
+        "z": "b3a066f6b6718cc8",
+        "name": "Regner ut tidsforskjell",
+        "func": "/*\ntimeControl sjekkes hvert minutt, om det har kommet en melding\nhvis det har gått mer enn 3 minutter siden siste melding,\nbetyr det at det er riktig nivå i tanken, som gjør at denne\nfunksjonen sender msg.payload = 3, videre, slik at nivået i\nDashbordet kan oppdateres.\n*/\n\nif(msg.payload) {\n    var timeControl = Date.now();\n    var lastMsg = flow.get('lastMsg');\n\n    var sumVal = timeControl - lastMsg;\n\n    if (sumVal > 180000) { //data blir kun sendt fra ESP når det ikke er OK nivå, sjekker hvert minutt. Derfor, hvis det har gått med enn 2 min siden sist sending, alt OK\n        msg.payload = 3.00    \n        return msg;\n    }\n}\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 320,
+        "wires": [
+            [
+                "f5ee8d6afe175f47",
+                "0e34922fb6024352"
+            ]
+        ]
+    },
+    {
+        "id": "c542bc5085822f47",
+        "type": "function",
+        "z": "b3a066f6b6718cc8",
+        "name": "funker1",
+        "func": "/*\nTie a function node to the output of an MQTT node from each ESP \nand wrote the current time into a global.  Then the output \ngoes to another function which again grabs the current time \nand subtracts the previously stored global time.  Then the \noutput is formatted for a dashboard text box.\n\nSjekk tid når MQTT varsel kommer inn og lagre som:\ncurrentTimeMsg (global verdi)\nDenne verdien trekkes fra forrige globalt lagrede verdi\nlastTimeMsg og lagres som lastTimeMsg\n\nHvis denne verdien er over f.eks. 3 minutter, endrer farge til\ngrønn for vanntank.\n\n*/\n\nif (msg.payload) { //sjekker inngangsverdi\n    var currentTime = Date.now();\n    msg.payload = currentTime;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "934d5fcec2af930a",
+        "type": "function",
+        "z": "b3a066f6b6718cc8",
+        "name": "funker2",
+        "func": "var currentTime = msg.payload;\nvar lastTimeMsg = flow.get('lastTimeMsg') || 0;\n\nvar last = flow.get('lastTimeMsg');\n\nvar sumVal = currentTime - last;\nflow.set('lastTimeMsg', currentTime);\n\nif (sumVal > 5000) { //data blir kun sendt fra ESP når det ikke er OK nivå, sjekker hvert minutt. Derfor, hvis det har gått med enn 2 min siden sist sending, alt OK\n    msg.payload = 3.00\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "41ed12669f90acf4",
+        "type": "inject",
+        "z": "b3a066f6b6718cc8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "str",
+        "x": 270,
+        "y": 320,
+        "wires": [
+            [
+                "a3be7f81af16928b"
+            ]
+        ]
+    },
+    {
+        "id": "f88d77e63c699109",
+        "type": "mqtt in",
+        "z": "f524022af2862ccb",
+        "name": "",
+        "topic": "hivemq/mailbox_status",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "83b034970699901a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 260,
+        "wires": [
+            [
+                "fe1f996ea91b9a6a",
+                "9457ba46f9862dd2"
+            ]
+        ]
+    },
+    {
+        "id": "5a6efdaecf86f09f",
+        "type": "mqtt out",
+        "z": "f524022af2862ccb",
+        "name": "",
+        "topic": "hivemq/retransmission",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "83b034970699901a",
+        "x": 740,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "fe1f996ea91b9a6a",
+        "type": "function",
+        "z": "f524022af2862ccb",
+        "name": "Endrer inngangsverdi",
+        "func": "if (msg.payload === \"1.00\") { //sjekker inngangsverdi\n    msg.payload = \"YOU'VE GOT MAIL\"      //endrer til \"ÅPEN\", hvis msg.payload === \"1.00\"\n    return msg;               //returnerer ny msg.payload\n}\n\n\nif (msg.payload === \"0.00\") {  //sjekker inngangsverdi\n    msg.payload = \"INGEN POST\"    //endrer til \"STENGT\", hvis msg.payload === \"0.00\"\n    return msg;               //returnerer ny msg.payload\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 260,
+        "wires": [
+            [
+                "5695ff8c220634be"
+            ]
+        ]
+    },
+    {
+        "id": "9457ba46f9862dd2",
+        "type": "function",
+        "z": "f524022af2862ccb",
+        "name": "Sjekker om inn-verdi er 1",
+        "func": "if (msg.payload === \"1.00\") { //sjekker inngangsverdi\n    msg.payload = \"1\"      \n    return msg;               //returnerer ny msg.payload\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 360,
+        "wires": [
+            [
+                "5a6efdaecf86f09f"
+            ]
+        ]
+    },
+    {
+        "id": "5695ff8c220634be",
+        "type": "ui_text",
+        "z": "f524022af2862ccb",
+        "group": "ee90ea8981de4014",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Status:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 700,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "b1654ff479ed4329",
+        "type": "mqtt in",
+        "z": "52eab17aebacfe9f",
+        "name": "",
+        "topic": "hivemq/",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "83b034970699901a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9e24b9a327c562bc",
+        "type": "mqtt in",
+        "z": "52eab17aebacfe9f",
+        "name": "",
+        "topic": "hivemq/",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "83b034970699901a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c171f15675679663",
+        "type": "mqtt in",
+        "z": "52eab17aebacfe9f",
+        "name": "",
+        "topic": "hivemq/",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "83b034970699901a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "adf8ced297354045",
+        "type": "mqtt in",
+        "z": "52eab17aebacfe9f",
+        "name": "",
+        "topic": "hivemq/",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "83b034970699901a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    }
+]
