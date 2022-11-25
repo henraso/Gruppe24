@@ -8,226 +8,36 @@
         "env": []
     },
     {
-        "id": "f8cf9a186af0e256",
-        "type": "mqtt in",
-        "z": "f258bac50c5c3410",
-        "name": "",
-        "topic": "hivemq/temperature",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "83b034970699901a",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 250,
-        "y": 220,
-        "wires": [
-            [
-                "32ab3a781119d79a",
-                "30ea29a494bf58cd",
-                "aa640f166813c1af"
-            ]
-        ]
-    },
-    {
-        "id": "2571e64a41e38c26",
-        "type": "mqtt in",
-        "z": "f258bac50c5c3410",
-        "name": "",
-        "topic": "hivemq/humidity",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "83b034970699901a",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 240,
-        "y": 340,
-        "wires": [
-            [
-                "4bc9c379fd9f7745",
-                "00befbd1ff0351e3",
-                "faa799892d1278db"
-            ]
-        ]
-    },
-    {
-        "id": "32ab3a781119d79a",
-        "type": "ui_text",
-        "z": "f258bac50c5c3410",
-        "group": "0f6db970f58f0759",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Siste måling:",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 490,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "4bc9c379fd9f7745",
-        "type": "ui_chart",
-        "z": "f258bac50c5c3410",
-        "name": "",
-        "group": "0f6db970f58f0759",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "label": "Luftfuktighet",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 490,
-        "y": 340,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "00befbd1ff0351e3",
-        "type": "ui_text",
-        "z": "f258bac50c5c3410",
-        "group": "0f6db970f58f0759",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Siste måling:",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 490,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "30ea29a494bf58cd",
-        "type": "debug",
-        "z": "f258bac50c5c3410",
-        "name": "debug temp",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 490,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "aa640f166813c1af",
-        "type": "ui_chart",
-        "z": "f258bac50c5c3410",
-        "name": "",
-        "group": "0f6db970f58f0759",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "label": "Temperatur",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 490,
-        "y": 220,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "3434f423d4285593",
-        "type": "comment",
-        "z": "f258bac50c5c3410",
-        "name": "Får verdier inn fra ESP32",
+        "id": "b3a066f6b6718cc8",
+        "type": "tab",
+        "label": "VANNTANK",
+        "disabled": false,
         "info": "",
-        "x": 270,
-        "y": 160,
-        "wires": []
+        "env": []
     },
     {
-        "id": "faa799892d1278db",
-        "type": "debug",
-        "z": "f258bac50c5c3410",
-        "name": "debug hum",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 490,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "3c3e1412ab59b2a6",
-        "type": "comment",
-        "z": "f258bac50c5c3410",
-        "name": "Viser mottatt data illustrativt",
+        "id": "f524022af2862ccb",
+        "type": "tab",
+        "label": "POSTKASSE",
+        "disabled": false,
         "info": "",
-        "x": 540,
-        "y": 140,
-        "wires": []
+        "env": []
+    },
+    {
+        "id": "52eab17aebacfe9f",
+        "type": "tab",
+        "label": "PLANTESENSOR",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "86c0b6c9ef99ac7f",
+        "type": "tab",
+        "label": "test",
+        "disabled": true,
+        "info": "",
+        "env": []
     },
     {
         "id": "83b034970699901a",
@@ -257,22 +67,1819 @@
         "sessionExpiry": ""
     },
     {
-        "id": "0f6db970f58f0759",
-        "type": "ui_group",
-        "name": "BME280",
-        "tab": "28bd952101d92c0a",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "28bd952101d92c0a",
         "type": "ui_tab",
         "name": "PROSJEKT",
         "icon": "dashboard",
         "disabled": false,
         "hidden": false
+    },
+    {
+        "id": "dfa11a1f0d98a038",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "dark"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "none",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "0f6db970f58f0759",
+        "type": "ui_group",
+        "name": "BME280",
+        "tab": "28bd952101d92c0a",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "ae2dfc3dc2f80938",
+        "type": "ui_group",
+        "name": "VANNTANK",
+        "tab": "28bd952101d92c0a",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "ee90ea8981de4014",
+        "type": "ui_group",
+        "name": "POSTKASSE",
+        "tab": "28bd952101d92c0a",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "f5ea17cd4014bb9d",
+        "type": "ui_group",
+        "name": "PLANTESENSOR",
+        "tab": "28bd952101d92c0a",
+        "order": 4,
+        "disp": true,
+        "width": 6,
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "f8cf9a186af0e256",
+        "type": "mqtt in",
+        "z": "f258bac50c5c3410",
+        "name": "",
+        "topic": "hivemq/temperature",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "83b034970699901a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 490,
+        "y": 280,
+        "wires": [
+            [
+                "32ab3a781119d79a",
+                "30ea29a494bf58cd",
+                "aa640f166813c1af",
+                "211ca69342138759"
+            ]
+        ]
+    },
+    {
+        "id": "2571e64a41e38c26",
+        "type": "mqtt in",
+        "z": "f258bac50c5c3410",
+        "name": "",
+        "topic": "hivemq/humidity",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "83b034970699901a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 500,
+        "y": 560,
+        "wires": [
+            [
+                "4bc9c379fd9f7745",
+                "00befbd1ff0351e3",
+                "faa799892d1278db",
+                "4dfa6ab7d0c485a9"
+            ]
+        ]
+    },
+    {
+        "id": "32ab3a781119d79a",
+        "type": "ui_text",
+        "z": "f258bac50c5c3410",
+        "group": "0f6db970f58f0759",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Siste måling:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 730,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "4bc9c379fd9f7745",
+        "type": "ui_chart",
+        "z": "f258bac50c5c3410",
+        "name": "",
+        "group": "0f6db970f58f0759",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Luftfuktighet",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 730,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "00befbd1ff0351e3",
+        "type": "ui_text",
+        "z": "f258bac50c5c3410",
+        "group": "0f6db970f58f0759",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Siste måling:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 730,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "30ea29a494bf58cd",
+        "type": "debug",
+        "z": "f258bac50c5c3410",
+        "name": "debug temp",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "aa640f166813c1af",
+        "type": "ui_chart",
+        "z": "f258bac50c5c3410",
+        "name": "",
+        "group": "0f6db970f58f0759",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Temperatur",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "35",
+        "removeOlder": "6",
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 730,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3434f423d4285593",
+        "type": "comment",
+        "z": "f258bac50c5c3410",
+        "name": "Får verdier inn fra ESP32",
+        "info": "",
+        "x": 470,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "faa799892d1278db",
+        "type": "debug",
+        "z": "f258bac50c5c3410",
+        "name": "debug hum",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "3c3e1412ab59b2a6",
+        "type": "comment",
+        "z": "f258bac50c5c3410",
+        "name": "Viser mottatt data illustrativt",
+        "info": "",
+        "x": 780,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "5ff049436f5df277",
+        "type": "function",
+        "z": "f258bac50c5c3410",
+        "name": "Varsel",
+        "func": "/*\nBasert på verdien som mottas fra ESP32-en, så printes en\ntilhørende string i dashbordet, for å få det i klartekst i\ndashbordet. Hvert 5. minutt sjekkes det om både luftfuktighet\nog temperatur er OK, for å oppdatere displayet.\n*/\n\nif (msg.payload == \"0.00\") { //sjekker inngangsverdi (verdi for høy)\n    msg.payload = \"Høy temperatur!\";\n    return msg; //returnerer msg\n}\nif (msg.payload == \"1.00\") { //sjekker inngangsverdi (verdi begynner å bli lav)\n    msg.payload = \"Lav temperatur!\";\n    return msg; //returnerer msg\n}\nif (msg.payload == \"2.00\") { //sjekker inngangsverdi\n    msg.payload = \"Høy luftfuktighet!\";\n    return msg; //returnerer msg\n}\nif (msg.payload == \"3.00\") { //sjekker inngangsverdi\n    msg.payload = \"Lav luftfuktighet!\";\n    return msg; //returnerer msg\n}\nif(msg.payload == 5) {\n    if((flow.get('humOK') == \"OK\") && (flow.get('tempOK') == \"OK\")) {\n        msg.payload = \"OK\";\n        return msg;\n    }\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 420,
+        "wires": [
+            [
+                "36151410a0c1867a"
+            ]
+        ]
+    },
+    {
+        "id": "36151410a0c1867a",
+        "type": "ui_text",
+        "z": "f258bac50c5c3410",
+        "group": "0f6db970f58f0759",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 1070,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "fec5e039b74033bb",
+        "type": "comment",
+        "z": "f258bac50c5c3410",
+        "name": "Varselboks hvis verdiene er under/over visse nivåer",
+        "info": "",
+        "x": 1210,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "1e9e1f7c4ef20394",
+        "type": "inject",
+        "z": "f258bac50c5c3410",
+        "name": "Simulering",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.00",
+        "payloadType": "str",
+        "x": 340,
+        "y": 420,
+        "wires": [
+            [
+                "5ff049436f5df277"
+            ]
+        ]
+    },
+    {
+        "id": "15a190373172b5b1",
+        "type": "mqtt in",
+        "z": "f258bac50c5c3410",
+        "name": "",
+        "topic": "hivemq/statVal",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "83b034970699901a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 500,
+        "y": 420,
+        "wires": [
+            [
+                "5ff049436f5df277"
+            ]
+        ]
+    },
+    {
+        "id": "211ca69342138759",
+        "type": "function",
+        "z": "f258bac50c5c3410",
+        "name": "Temperatur OK?",
+        "func": "var tempOK = flow.get('tempOK') || 0;\n\nvar lastTemp = msg.payload;\n\nif ((lastTemp > 18) && (lastTemp < 28)) {\n    flow.set('tempOK', \"OK\");\n    msg.payload = flow.get('tempOK');\n    return msg;\n}else {\n    flow.set('tempOK', \"NotOK\");\n    msg.payload = flow.get('tempOK');\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 360,
+        "wires": [
+            [
+                "5ff049436f5df277"
+            ]
+        ]
+    },
+    {
+        "id": "4dfa6ab7d0c485a9",
+        "type": "function",
+        "z": "f258bac50c5c3410",
+        "name": "Luftfuktighet ok?",
+        "func": "var humOK = flow.get('humOK') || 0;\n\nvar lastHum = msg.payload;\n\nif ((lastHum > 39) && (lastHum < 61)) {\n    flow.set('humOK', \"OK\");\n    msg.payload = flow.get('humOK');\n    return msg;\n} else {\n    flow.set('humOK', \"NotOK\");\n    msg.payload = flow.get('humOK');\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 480,
+        "wires": [
+            [
+                "5ff049436f5df277"
+            ]
+        ]
+    },
+    {
+        "id": "ac0f9d580ec80ef9",
+        "type": "inject",
+        "z": "f258bac50c5c3410",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "5",
+        "payloadType": "num",
+        "x": 770,
+        "y": 400,
+        "wires": [
+            [
+                "5ff049436f5df277"
+            ]
+        ]
+    },
+    {
+        "id": "521d45e82c099f04",
+        "type": "comment",
+        "z": "f258bac50c5c3410",
+        "name": "sjekker om temp er ok",
+        "info": "Hvis temp er OK, lagre \"OK\" til en variabel\nsom er tilgjengelig i hele flowen. \nDenne verdien sjekkes hvert 5. minutt\nHvis både temp er OK og humidity er OK\nvises OK i dashbordet.",
+        "x": 940,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "3fb3619e8f44689f",
+        "type": "mqtt in",
+        "z": "b3a066f6b6718cc8",
+        "name": "",
+        "topic": "hivemq/water_level",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "83b034970699901a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 450,
+        "y": 440,
+        "wires": [
+            [
+                "0e34922fb6024352",
+                "5ee4252fb874f788",
+                "7a7b343fde831138",
+                "bbb10cbbdbd7f68f",
+                "f9480daec7450c44"
+            ]
+        ]
+    },
+    {
+        "id": "4492c43f1cf89560",
+        "type": "ui_text",
+        "z": "b3a066f6b6718cc8",
+        "group": "ae2dfc3dc2f80938",
+        "order": 3,
+        "width": "6",
+        "height": "1",
+        "name": "",
+        "label": "Status:",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 1020,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "0e34922fb6024352",
+        "type": "function",
+        "z": "b3a066f6b6718cc8",
+        "d": true,
+        "name": "Endrer farge og oppdaterer hvis nivå OK",
+        "func": "/* \nEndrer farge når nivået er ved et gitt nivå som ESP sender\nhvis nivået er for høyt = gul farge (msg.payload = 0)\nhvis nivå er for lavt = rød (msg.payload = 2)\nhvis nivå begynner å bli lavt = gul (msg.payload = 1)\nESP32 sender kun verdi hvis nivået ikke er som det skal være,\nså hvis det ikke kommer inn en melding på 3 minutter, vil \nmsg.payload settes til 4, og den meldingen sendt til denne\nfunksjonen, som da oversetter det til grønn farge og \"OK\".\n*/\n\nif (msg.payload == \"4.00\") { //sjekker inngangsverdi\n    msg.colour = \"#28d74e\" //endrer farge til grønn\n}\nif (msg.payload == \"0.00\") { //sjekker inngangsverdi (verdi for høy)\n    msg.colour = \"#ffbf00\" //endrer farge til gult\n}\nif (msg.payload == \"1.00\") { //sjekker inngangsverdi (verdi begynner å bli lav)\n    msg.colour = \"#ffbf00\" //endrer farge til gult\n}\nif (msg.payload == \"2.00\") { //sjekker inngangsverdi\n    msg.colour = \"#dc2324\" //endrer farge til rødt\n}\n\n\nreturn msg; //returnerer msg.colour",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 380,
+        "wires": [
+            [
+                "0c0a5280358e8bcb",
+                "5d9332e10bedc73c"
+            ]
+        ]
+    },
+    {
+        "id": "a85b7a743f149bb9",
+        "type": "comment",
+        "z": "b3a066f6b6718cc8",
+        "name": "Kun brukt for å vise en varselfarge for nivået i tanken",
+        "info": "",
+        "x": 1270,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "0c0a5280358e8bcb",
+        "type": "debug",
+        "z": "b3a066f6b6718cc8",
+        "d": true,
+        "name": "Endre farge",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "4711ee0ec4e8ce88",
+        "type": "inject",
+        "z": "b3a066f6b6718cc8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "50",
+        "payloadType": "num",
+        "x": 110,
+        "y": 440,
+        "wires": [
+            [
+                "0e34922fb6024352",
+                "5ee4252fb874f788",
+                "7a7b343fde831138"
+            ]
+        ]
+    },
+    {
+        "id": "5ee4252fb874f788",
+        "type": "function",
+        "z": "b3a066f6b6718cc8",
+        "d": true,
+        "name": "Lagrer siste tid",
+        "func": "/*\nNår den får en msg.payload, lagre tiden meldingen kom inn\ni en variabel som er tilgjengelig i hele flowen\n*/\n\nvar lastMsg = flow.get('lastMsg') || 0;\n\nif (msg.payload) { //sjekker inngangsverdi\n    flow.set('lastMsg', Date.now());\n    msg.payload = flow.get('lastMsg');\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f5ee8d6afe175f47",
+        "type": "debug",
+        "z": "b3a066f6b6718cc8",
+        "d": true,
+        "name": "har det gått lang nok tid?",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "a3be7f81af16928b",
+        "type": "function",
+        "z": "b3a066f6b6718cc8",
+        "d": true,
+        "name": "Regner ut tidsforskjell",
+        "func": "/*\ntimeControl sjekkes hvert minutt, om det har kommet en melding\nhvis det har gått mer enn 3 minutter siden siste melding,\nbetyr det at det er riktig nivå i tanken, som gjør at denne\nfunksjonen sender msg.payload = 3, videre, slik at nivået i\nDashbordet kan oppdateres.\n*/\n\nif(msg.payload) {\n    var timeControl = Date.now();\n    var lastMsg = flow.get('lastMsg');\n\n    msg.payload = Date.now();\n\n    var sumVal = timeControl - lastMsg;\n\n    if (sumVal > 180000) { //data blir kun sendt fra ESP når det ikke er OK nivå, sjekker hvert minutt. Derfor, hvis det har gått med enn 2 min siden sist sending, alt OK\n        msg.payload = \"4.00\";\n        flow.set('lastMsg', 0);\n        return msg;\n    }\n\n}\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 320,
+        "wires": [
+            [
+                "f5ee8d6afe175f47",
+                "0e34922fb6024352"
+            ]
+        ]
+    },
+    {
+        "id": "c542bc5085822f47",
+        "type": "function",
+        "z": "b3a066f6b6718cc8",
+        "name": "feil",
+        "func": "/*\nTie a function node to the output of an MQTT node from each ESP \nand wrote the current time into a global.  Then the output \ngoes to another function which again grabs the current time \nand subtracts the previously stored global time.  Then the \noutput is formatted for a dashboard text box.\n\nSjekk tid når MQTT varsel kommer inn og lagre som:\ncurrentTimeMsg (global verdi)\nDenne verdien trekkes fra forrige globalt lagrede verdi\nlastTimeMsg og lagres som lastTimeMsg\n\nHvis denne verdien er over f.eks. 3 minutter, endrer farge til\ngrønn for vanntank.\n\n*/\n\nif (msg.payload) { //sjekker inngangsverdi\n    var currentTime = Date.now();\n    msg.payload = currentTime;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 70,
+        "y": 20,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "934d5fcec2af930a",
+        "type": "function",
+        "z": "b3a066f6b6718cc8",
+        "name": "feil",
+        "func": "var currentTime = msg.payload;\nvar lastTimeMsg = flow.get('lastTimeMsg') || 0;\n\nvar last = flow.get('lastTimeMsg');\n\nvar sumVal = currentTime - last;\nflow.set('lastTimeMsg', currentTime);\n\nif (sumVal > 5000) { //data blir kun sendt fra ESP når det ikke er OK nivå, sjekker hvert minutt. Derfor, hvis det har gått med enn 2 min siden sist sending, alt OK\n    msg.payload = 3.00\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 170,
+        "y": 20,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "41ed12669f90acf4",
+        "type": "inject",
+        "z": "b3a066f6b6718cc8",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "str",
+        "x": 270,
+        "y": 320,
+        "wires": [
+            [
+                "a3be7f81af16928b"
+            ]
+        ]
+    },
+    {
+        "id": "b98bb044a3d09bd7",
+        "type": "comment",
+        "z": "b3a066f6b6718cc8",
+        "d": true,
+        "name": "testknapp",
+        "info": "",
+        "x": 100,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "d571254b2a9ddd15",
+        "type": "comment",
+        "z": "b3a066f6b6718cc8",
+        "name": "kjører hvert minutt",
+        "info": "har endret så den bare kjører hver 5. time \nnår vi ikke aktivt driver å jobber/tester \nprosjektet",
+        "x": 230,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "7a7b343fde831138",
+        "type": "function",
+        "z": "b3a066f6b6718cc8",
+        "name": "Tall til tekst",
+        "func": "if (msg.payload < \"15\") {\n    msg.payload = \"Nivå er for lavt for å vanne!\";\n    msg.colour = \"#dc2324\"; //endrer farge til rødt\n    return msg;\n}\n\nif (msg.payload < \"30\") {\n    msg.payload = \"Kritisk lavt nivå!\";\n    msg.colour = \"#dc2324\" //endrer farge til rødt\n    return msg;\n}\n\nelse if (msg.payload < \"50\") {\n    msg.payload = \"Lavt nivå\";\n    msg.colour = \"#ffbf00\" //endrer farge til gult\n    return msg;\n}\n\nelse if (msg.payload < \"70\") {\n    msg.payload = \"Akseptabelt nivå\";\n    msg.colour = \"#28d74e\" //endrer farge til grønn\n    return msg;\n}\n\nelse if (msg.payload >= \"70\") {\n    msg.payload = \"OK nivå\";\n    msg.colour = \"#28d74e\" //endrer farge til grønn\n    return msg;\n}\n\n\n\n\n/*if (msg.payload == \"0.00\") { //sjekker inngangsverdi (verdi for høy)\n    msg.payload = \"Nivået er for høyt!\";\n    return msg; //returnerer msg\n}\nif (msg.payload == \"1.00\") { //sjekker inngangsverdi (verdi begynner å bli lav)\n    msg.payload = \"Nivå begynner å bli lavt!\";\n    return msg; //returnerer msg\n}\nif (msg.payload == \"2.00\") { //sjekker inngangsverdi\n    msg.payload = \"Kritisk lavt!\";\n    return msg; //returnerer msg\n}\nif (msg.payload == \"3.00\") {\n    msg.payload = \"Nivå er for lavt for å vanne!\"\n    return msg; //returnerer msg\n}\nif (msg.payload == \"4.00\") {\n    msg.payload = \"Nivå OK\"\n    return msg; //returnerer msg\n}*/\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 440,
+        "wires": [
+            [
+                "4492c43f1cf89560",
+                "5d9332e10bedc73c"
+            ]
+        ]
+    },
+    {
+        "id": "ba405f32faa4d9fc",
+        "type": "comment",
+        "z": "b3a066f6b6718cc8",
+        "name": "",
+        "info": "Ultralydsensor sjekker vannivået hvert x min.\nog sender en verdi for vannivået kun hvis\ndet ikke er OK.\nDerfor er denne delen satt inn, for å sjekke\nom det har kommet inn noen meldinger de siste\n3x minuttene.\nSi at vannivået blir sjekket hvert x minutt\nHvis det ikke har blitt sendt noen melding\nde siste 3*x minuttene, betyr det at vannivået\ner OK.",
+        "x": 440,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "14f7bd19ada0538a",
+        "type": "inject",
+        "z": "b3a066f6b6718cc8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "101",
+        "payloadType": "str",
+        "x": 270,
+        "y": 560,
+        "wires": [
+            [
+                "f6d1762f84167a14"
+            ]
+        ]
+    },
+    {
+        "id": "f6d1762f84167a14",
+        "type": "mqtt out",
+        "z": "b3a066f6b6718cc8",
+        "name": "",
+        "topic": "hivemq/moisttest",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "83b034970699901a",
+        "x": 470,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "bbb10cbbdbd7f68f",
+        "type": "debug",
+        "z": "b3a066f6b6718cc8",
+        "name": "Tank debug",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "c7d8c320cedd3e90",
+        "type": "link in",
+        "z": "b3a066f6b6718cc8",
+        "name": "Link inn fuktighetssensor",
+        "links": [
+            "db1c59663ad0ae53"
+        ],
+        "x": 345,
+        "y": 600,
+        "wires": [
+            [
+                "f6d1762f84167a14"
+            ]
+        ]
+    },
+    {
+        "id": "f9480daec7450c44",
+        "type": "ui_gauge",
+        "z": "b3a066f6b6718cc8",
+        "name": "",
+        "group": "ae2dfc3dc2f80938",
+        "order": 5,
+        "width": "0",
+        "height": "0",
+        "gtype": "wave",
+        "title": "Vannivå",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 680,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "78950e4a6361a14f",
+        "type": "comment",
+        "z": "b3a066f6b6718cc8",
+        "name": "kommentar",
+        "info": "msg.payload == \"0.00\" returnerer \"Nivået er for høyt!\";\nmsg.payload == \"1.00\" returnerer \"Nivå begynner å bli lavt!\";\nmsg.payload == \"2.00\" returnerer \"Kritisk lavt!\";\nmsg.payload == \"3.00\" returnerer \"Nivå er for lavt for å vanne!\"",
+        "x": 860,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "14dba94dac79c70c",
+        "type": "comment",
+        "z": "b3a066f6b6718cc8",
+        "name": "display nivå",
+        "info": "",
+        "x": 810,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "317caea5b597c7af",
+        "type": "comment",
+        "z": "b3a066f6b6718cc8",
+        "name": "Alle  funksjoner er kommentert",
+        "info": "",
+        "x": 700,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "851d2b04fdb4a511",
+        "type": "comment",
+        "z": "b3a066f6b6718cc8",
+        "name": "simuleringsknapp",
+        "info": "",
+        "x": 280,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "5d9332e10bedc73c",
+        "type": "ui_button",
+        "z": "b3a066f6b6718cc8",
+        "name": "",
+        "group": "ae2dfc3dc2f80938",
+        "order": 2,
+        "width": "6",
+        "height": "2",
+        "passthru": false,
+        "label": "",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{colour}}",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1010,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f88d77e63c699109",
+        "type": "mqtt in",
+        "z": "f524022af2862ccb",
+        "name": "",
+        "topic": "hivemq/mailbox_status",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "83b034970699901a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 260,
+        "wires": [
+            [
+                "fe1f996ea91b9a6a",
+                "9457ba46f9862dd2"
+            ]
+        ]
+    },
+    {
+        "id": "5a6efdaecf86f09f",
+        "type": "mqtt out",
+        "z": "f524022af2862ccb",
+        "name": "",
+        "topic": "hivemq/retransmission",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "83b034970699901a",
+        "x": 700,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "fe1f996ea91b9a6a",
+        "type": "function",
+        "z": "f524022af2862ccb",
+        "name": "Endrer inngangsverdi Tall -> Tekst",
+        "func": "/*\nVerdien som mottas er enten 0 eller 1. En string som er \ntilegnet hver verdi printes basert på hva som er mottatt.\n*/\n\nif (msg.payload === 1) { //sjekker inngangsverdi\n    msg.payload = \"YOU'VE GOT MAIL\"      //endrer til \"YOU'VE GOT MAIL\", hvis msg.payload === \"1.00\"\n    return msg;               //returnerer ny msg.payload\n}\n\n\nif (msg.payload === 0) {  //sjekker inngangsverdi\n    msg.payload = \"POSTKASSEN ER TOM\"    //endrer til \"INGEN POST\", hvis msg.payload === \"0.00\"\n    return msg;               //returnerer ny msg.payload\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 260,
+        "wires": [
+            [
+                "5695ff8c220634be"
+            ]
+        ]
+    },
+    {
+        "id": "9457ba46f9862dd2",
+        "type": "function",
+        "z": "f524022af2862ccb",
+        "name": "Sjekker mottatt verdi",
+        "func": "/*\nSender bekreftelse tilbake til node hvis dataen faktisk er\nmottatt i Node RED.\n\nVerdien som mottas er enten 0 eller 1. Hvis den er 1 vil det\nbli sendt en retransmisjon tilbake til ESP32en som er montert\ni postkassen. Ved mottatt verdi vil ESP gå tilbake til sleep.\nMottar den ikke 1 innen et gitt tidsrom så prøver den å sende\npå nytt.\n*/\n\n/*if (msg.payload == \"1.00\") { //sjekker inngangsverdi\n    msg.payload = \"1\"      \n    return msg;               //returnerer ny msg.payload\n}*/\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 300,
+        "wires": [
+            [
+                "824350ef9805cdff",
+                "5a6efdaecf86f09f"
+            ]
+        ]
+    },
+    {
+        "id": "5695ff8c220634be",
+        "type": "ui_text",
+        "z": "f524022af2862ccb",
+        "group": "ee90ea8981de4014",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Status:",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 700,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "824350ef9805cdff",
+        "type": "debug",
+        "z": "f524022af2862ccb",
+        "name": "debug post",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "b1654ff479ed4329",
+        "type": "mqtt in",
+        "z": "52eab17aebacfe9f",
+        "name": "Sensor 1",
+        "topic": "hivemq/moist1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "83b034970699901a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 180,
+        "wires": [
+            [
+                "583f8c87adafd436",
+                "8242257f4a6eedd5",
+                "d8def7d15700b96d"
+            ]
+        ]
+    },
+    {
+        "id": "9e24b9a327c562bc",
+        "type": "mqtt in",
+        "z": "52eab17aebacfe9f",
+        "name": "Sensor 2",
+        "topic": "hivemq/moist2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "83b034970699901a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 320,
+        "wires": [
+            [
+                "e2fe12adced1c628",
+                "336c9b4bf92b2c5f",
+                "d11ce9cc8d56d8bd"
+            ]
+        ]
+    },
+    {
+        "id": "c171f15675679663",
+        "type": "mqtt in",
+        "z": "52eab17aebacfe9f",
+        "name": "Sensor 3",
+        "topic": "hivemq/moist3",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "83b034970699901a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 460,
+        "wires": [
+            [
+                "ec380c0df7e8b4f2",
+                "0a4a363fde8208cc",
+                "bc182c54a40ca106"
+            ]
+        ]
+    },
+    {
+        "id": "a97bdcc1170230b7",
+        "type": "comment",
+        "z": "52eab17aebacfe9f",
+        "name": "Tanker om EC og sky",
+        "info": "Hvor mye skal vi tenke på Edge Computing\nog hvor mye skal vi ha i dashbordet (skyen)?\n\nOptimalt sett burde ESP med plantesensor\nkommunisert direkte med ESP på pumpa\nvha. ESP-NOW, slik at de ikke trenger\nå koble til MQTT eller WiFi.\n\nDette fører til:\n- Mindre trafikk på nettet\n- Lavere strømforbruk\n\nESP-NOW er raskere enn WiFi+MQTT-tilkobling\nnoe som fører til at tiden enhetene er våkne\ner lavere, og dermed blir strømforbruket\nlavere.\n",
+        "x": 360,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "ec380c0df7e8b4f2",
+        "type": "debug",
+        "z": "52eab17aebacfe9f",
+        "name": "debug s3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 320,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "8242257f4a6eedd5",
+        "type": "function",
+        "z": "52eab17aebacfe9f",
+        "name": "Gjør  om verdi",
+        "func": "/*\nPrinter en string til dashbordet basert på mottatt verdi.\nFår feilkoden i klartekst slik at det er lettere å skjønne.\n*/\n\nif (msg.payload == \"101\") {\n    msg.payload = \"Trenger vann!\";\n    return msg; //returnerer msg\n}\n\nif (msg.payload == \"102\") { //sjekker inngangsverdi (verdi begynner å bli lav)\n    msg.payload = \"OK\";\n    return msg; //returnerer msg\n}\n\nif (msg.payload == \"103\") { //sjekker inngangsverdi\n    msg.payload = \"Kritisk feil eller ikke tilkoblet\"\n    return msg; //returnerer msg\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 220,
+        "wires": [
+            [
+                "a86dd8f4f42b2c75",
+                "163d9b095091c531"
+            ]
+        ]
+    },
+    {
+        "id": "a86dd8f4f42b2c75",
+        "type": "ui_text",
+        "z": "52eab17aebacfe9f",
+        "group": "f5ea17cd4014bb9d",
+        "order": 1,
+        "width": "2",
+        "height": "2",
+        "name": "",
+        "label": "Sensor 1:",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 540,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "336c9b4bf92b2c5f",
+        "type": "function",
+        "z": "52eab17aebacfe9f",
+        "name": "Gjør om verdi",
+        "func": "/*\nPrinter en string til dashbordet basert på mottatt verdi.\nFår feilkoden i klartekst slik at det er lettere å skjønne.\n*/\n\nif (msg.payload == \"101\") {\n    msg.payload = \"Trenger vann!\";\n    return msg; //returnerer msg\n}\n\nif (msg.payload == \"102\") { //sjekker inngangsverdi (verdi begynner å bli lav)\n    msg.payload = \"OK\";\n    return msg; //returnerer msg\n}\nif (msg.payload == \"103\") { //sjekker inngangsverdi\n    msg.payload = \"Kritisk feil eller ikke tilkoblet\"\n    return msg; //returnerer msg\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 360,
+        "wires": [
+            [
+                "8e07ea15aec5acad",
+                "163d9b095091c531"
+            ]
+        ]
+    },
+    {
+        "id": "0a4a363fde8208cc",
+        "type": "function",
+        "z": "52eab17aebacfe9f",
+        "name": "Gjør om verdi",
+        "func": "/*\nPrinter en string til dashbordet basert på mottatt verdi.\nFår feilkoden i klartekst slik at det er lettere å skjønne.\n*/\n\nif (msg.payload == \"101\") {\n    msg.payload = \"Trenger vann!\";\n    return msg; //returnerer msg\n}\n\nif (msg.payload == \"102\") { //sjekker inngangsverdi (verdi begynner å bli lav)\n    msg.payload = \"OK\";\n    return msg; //returnerer msg\n}\nif (msg.payload == \"103\") { //sjekker inngangsverdi\n    msg.payload = \"Kritisk feil eller ikke tilkoblet\"\n    return msg; //returnerer msg\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 500,
+        "wires": [
+            [
+                "813821e641056072",
+                "163d9b095091c531"
+            ]
+        ]
+    },
+    {
+        "id": "8e07ea15aec5acad",
+        "type": "ui_text",
+        "z": "52eab17aebacfe9f",
+        "group": "f5ea17cd4014bb9d",
+        "order": 1,
+        "width": "2",
+        "height": "2",
+        "name": "",
+        "label": "Sensor 2:",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 520,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "813821e641056072",
+        "type": "ui_text",
+        "z": "52eab17aebacfe9f",
+        "group": "f5ea17cd4014bb9d",
+        "order": 1,
+        "width": "2",
+        "height": "2",
+        "name": "",
+        "label": "Sensor 3:",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 540,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "2629589c55d124e3",
+        "type": "ui_gauge",
+        "z": "52eab17aebacfe9f",
+        "name": "",
+        "group": "f5ea17cd4014bb9d",
+        "order": 4,
+        "width": "2",
+        "height": "3",
+        "gtype": "wave",
+        "title": "Fuktsensor 1",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 590,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "1b51170ba0967d2b",
+        "type": "ui_gauge",
+        "z": "52eab17aebacfe9f",
+        "name": "",
+        "group": "f5ea17cd4014bb9d",
+        "order": 4,
+        "width": "2",
+        "height": "3",
+        "gtype": "wave",
+        "title": "Fuktsensor 2",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 590,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "1e85a33bca0282bc",
+        "type": "ui_gauge",
+        "z": "52eab17aebacfe9f",
+        "name": "",
+        "group": "f5ea17cd4014bb9d",
+        "order": 4,
+        "width": "2",
+        "height": "3",
+        "gtype": "wave",
+        "title": "Fuktsensor 3",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 590,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "e2fe12adced1c628",
+        "type": "debug",
+        "z": "52eab17aebacfe9f",
+        "name": "debug s2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 320,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "583f8c87adafd436",
+        "type": "debug",
+        "z": "52eab17aebacfe9f",
+        "name": "debug s1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 320,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "db1c59663ad0ae53",
+        "type": "link out",
+        "z": "52eab17aebacfe9f",
+        "d": true,
+        "name": "link ut til vanntank",
+        "mode": "link",
+        "links": [
+            "c7d8c320cedd3e90"
+        ],
+        "x": 795,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "163d9b095091c531",
+        "type": "function",
+        "z": "52eab17aebacfe9f",
+        "name": "txt -> num",
+        "func": "/*\nGjør om en gitt string til et tall som sendes videre til\nvanntanken. Dette er ikke det mest effektive mtp. Edge Computing\nda denne meldingen egentlig ikke hadde trengt å gå gjennom skyen\n*/\n\nif(msg.payload == \"Trenger vann!\") {\n    msg.payload = 101;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 360,
+        "wires": [
+            [
+                "db1c59663ad0ae53"
+            ]
+        ]
+    },
+    {
+        "id": "d8def7d15700b96d",
+        "type": "function",
+        "z": "52eab17aebacfe9f",
+        "name": "sjekker at verdi er under 100",
+        "func": "/*\nKan aldri være over 100%\n*/\n\nif(msg.payload < 100) {\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 180,
+        "wires": [
+            [
+                "2629589c55d124e3"
+            ]
+        ]
+    },
+    {
+        "id": "d11ce9cc8d56d8bd",
+        "type": "function",
+        "z": "52eab17aebacfe9f",
+        "name": "sjekker at verdi er under 100",
+        "func": "/*\nKan aldri være over 100%\n*/\n\nif (msg.payload < 100) {\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 320,
+        "wires": [
+            [
+                "1b51170ba0967d2b"
+            ]
+        ]
+    },
+    {
+        "id": "bc182c54a40ca106",
+        "type": "function",
+        "z": "52eab17aebacfe9f",
+        "name": "sjekker at verdi er under 100",
+        "func": "/*\nKan aldri være over 100%\n*/\n\nif (msg.payload < 100) {\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 460,
+        "wires": [
+            [
+                "1e85a33bca0282bc"
+            ]
+        ]
+    },
+    {
+        "id": "162b8858173b83c6",
+        "type": "mqtt in",
+        "z": "86c0b6c9ef99ac7f",
+        "name": "",
+        "topic": "hivemq/water_level",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "83b034970699901a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 610,
+        "y": 620,
+        "wires": [
+            [
+                "828c1bb01c1e7bf6",
+                "3c6842b23af8b9a5",
+                "78aad6dbacd729fe"
+            ]
+        ]
+    },
+    {
+        "id": "a1ab46a6059e46cf",
+        "type": "ui_text",
+        "z": "86c0b6c9ef99ac7f",
+        "group": "ae2dfc3dc2f80938",
+        "order": 4,
+        "width": "6",
+        "height": "2",
+        "name": "",
+        "label": "Status:",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 1200,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "828c1bb01c1e7bf6",
+        "type": "function",
+        "z": "86c0b6c9ef99ac7f",
+        "name": "Endrer farge og oppdaterer hvis nivå OK",
+        "func": "/* \nEndrer farge når nivået er ved et gitt nivå som ESP sender\nhvis nivået er for høyt = gul farge (msg.payload = 0)\nhvis nivå er for lavt = rød (msg.payload = 2)\nhvis nivå begynner å bli lavt = gul (msg.payload = 1)\nESP32 sender kun verdi hvis nivået ikke er som det skal være,\nså hvis det ikke kommer inn en melding på 3 minutter, vil \nmsg.payload settes til 3, og den meldingen sendt til denne\nfunksjonen, som da oversetter det til grønn farge.\n*/\n\nif (msg.payload == \"3.00\") { //sjekker inngangsverdi\n    msg.colour = \"#28d74e\" //endrer farge til grønn\n    msg.payload = \"Nivå OK\";\n}\nif (msg.payload == \"0.00\") { //sjekker inngangsverdi (verdi for høy)\n    msg.colour = \"#ffbf00\" //endrer farge til gult\n}\nif (msg.payload == \"1.00\") { //sjekker inngangsverdi (verdi begynner å bli lav)\n    msg.colour = \"#ffbf00\" //endrer farge til gult\n}\nif (msg.payload == \"2.00\") { //sjekker inngangsverdi\n    msg.colour = \"#dc2324\" //endrer farge til rødt\n}\n\n\nreturn msg; //returnerer msg.colour",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 560,
+        "wires": [
+            [
+                "68c009a2cefc4ce4",
+                "b93a35fed8674aa7",
+                "78aad6dbacd729fe"
+            ]
+        ]
+    },
+    {
+        "id": "68c009a2cefc4ce4",
+        "type": "ui_button",
+        "z": "86c0b6c9ef99ac7f",
+        "name": "",
+        "group": "ae2dfc3dc2f80938",
+        "order": 1,
+        "width": "6",
+        "height": "2",
+        "passthru": false,
+        "label": "",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{colour}}",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1190,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c0b9ca0c9f6c9906",
+        "type": "comment",
+        "z": "86c0b6c9ef99ac7f",
+        "name": "Ikke en knapp, kun  brukt for å vise en varselfarge for nivået i tanken",
+        "info": "",
+        "x": 1380,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "b93a35fed8674aa7",
+        "type": "debug",
+        "z": "86c0b6c9ef99ac7f",
+        "name": "Endre farge",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1210,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "5d96a192d312bff7",
+        "type": "inject",
+        "z": "86c0b6c9ef99ac7f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "2.00",
+        "payloadType": "str",
+        "x": 270,
+        "y": 620,
+        "wires": [
+            [
+                "828c1bb01c1e7bf6",
+                "3c6842b23af8b9a5",
+                "78aad6dbacd729fe"
+            ]
+        ]
+    },
+    {
+        "id": "3c6842b23af8b9a5",
+        "type": "function",
+        "z": "86c0b6c9ef99ac7f",
+        "name": "Lagrer siste tid",
+        "func": "/*\nNår den får en msg.payload, lagre tiden meldingen kom inn\ni en variabel som er tilgjengelig i hele flowen\n*/\n\nvar lastMsg = flow.get('lastMsg') || 0;\n\nif (msg.payload) { //sjekker inngangsverdi\n    flow.set('lastMsg', Date.now());\n    msg.payload = flow.get('lastMsg');\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aef899d4c7779f57",
+        "type": "debug",
+        "z": "86c0b6c9ef99ac7f",
+        "name": "har det gått lang nok tid?",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "2c6f4f72df03e549",
+        "type": "function",
+        "z": "86c0b6c9ef99ac7f",
+        "name": "Regner ut tidsforskjell",
+        "func": "/*\ntimeControl sjekkes hvert minutt, om det har kommet en melding\nhvis det har gått mer enn 3 minutter siden siste melding,\nbetyr det at det er riktig nivå i tanken, som gjør at denne\nfunksjonen sender msg.payload = 3, videre, slik at nivået i\nDashbordet kan oppdateres.\n*/\n\nif(msg.payload) {\n    var timeControl = Date.now();\n    var lastMsg = flow.get('lastMsg');\n\n    var sumVal = timeControl - lastMsg;\n\n    if (sumVal > 180000) { //data blir kun sendt fra ESP når det ikke er OK nivå, sjekker hvert minutt. Derfor, hvis det har gått med enn 2 min siden sist sending, alt OK\n        msg.payload = 3.00    \n        return msg;\n    }\n}\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 500,
+        "wires": [
+            [
+                "aef899d4c7779f57",
+                "828c1bb01c1e7bf6"
+            ]
+        ]
+    },
+    {
+        "id": "db64c04610854b0e",
+        "type": "inject",
+        "z": "86c0b6c9ef99ac7f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "180",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "str",
+        "x": 430,
+        "y": 500,
+        "wires": [
+            [
+                "2c6f4f72df03e549"
+            ]
+        ]
+    },
+    {
+        "id": "7dd17ee3e77e0617",
+        "type": "comment",
+        "z": "86c0b6c9ef99ac7f",
+        "name": "testknapp",
+        "info": "",
+        "x": 260,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "4055327622c4db2b",
+        "type": "comment",
+        "z": "86c0b6c9ef99ac7f",
+        "name": "kjører hvert minutt",
+        "info": "har endret så den bare kjører hver 5. time \nnår vi ikke aktivt driver å jobber/tester \nprosjektet",
+        "x": 390,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "ee4073f01041c26b",
+        "type": "comment",
+        "z": "86c0b6c9ef99ac7f",
+        "name": "Tanker om EC og sky",
+        "info": "Hvor mye skal vi tenke på Edge Computing\nog hvor mye skal vi ha i dashbordet (skyen)?\n\nOptimalt sett burde ESP med plantesensor\nkommunisert direkte med ESP på pumpa\nvha. ESP-NOW, slik at de ikke trenger\nå koble til MQTT eller WiFi.\n\nDette fører til:\n- Mindre trafikk på nettet\n- Lavere strømforbruk\n\nESP-NOW er raskere enn WiFi+MQTT-tilkobling\nnoe som fører til at tiden enhetene er våkne\ner lavere, og dermed blir strømforbruket\nlavere.\n",
+        "x": 860,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "78aad6dbacd729fe",
+        "type": "function",
+        "z": "86c0b6c9ef99ac7f",
+        "name": "Tall til tekst",
+        "func": "if (msg.payload == \"0.00\") { //sjekker inngangsverdi (verdi for høy)\n    msg.payload = \"Nivået er for høyt!\";\n}\nif (msg.payload == \"1.00\") { //sjekker inngangsverdi (verdi begynner å bli lav)\n    msg.payload = \"Nivå begynner å bli lavt!\";\n}\nif (msg.payload == \"2.00\") { //sjekker inngangsverdi\n    msg.payload = \"Kritisk lavt!\";\n}\n\n\nreturn msg; //returnerer msg\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 620,
+        "wires": [
+            [
+                "a1ab46a6059e46cf"
+            ]
+        ]
     }
 ]
